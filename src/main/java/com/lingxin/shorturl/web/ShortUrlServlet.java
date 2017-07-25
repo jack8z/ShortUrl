@@ -1,4 +1,4 @@
-package com.lingxin.shorturl;
+package com.lingxin.shorturl.web;
 
 import java.io.IOException;
 import javax.servlet.ServletException;

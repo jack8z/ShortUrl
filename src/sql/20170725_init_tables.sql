@@ -7,7 +7,10 @@ CREATE TABLE `short_urls` (
   `short_url` varchar(1024) DEFAULT NULL COMMENT '短网址',
   `access_times` bigint(20) unsigned zerofill NOT NULL COMMENT '短网址的访问次数',
   `created` datetime NOT NULL COMMENT '短网址的生成时间',
-  `modified` datetime NOT NULL COMMENT '短网址的修改时间，access_times加1时，修改此时间',
+  `modified` datetime NOT NULL COMMENT '短网址的修改时间，当access_times加1时，不修改此时间',
+  `accessed` datetime NOT NULL COMMENT '短网址的最后访问时间，当access_times加1时，修改此时间',
   PRIMARY KEY (`id`),
   UNIQUE KEY `short_url_UNIQUE` (`short_url`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+ALTER TABLE `short_urls` AUTO_INCREMENT = 10001 ;

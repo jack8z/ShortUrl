@@ -3,15 +3,25 @@
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
-  <display-name>Archetype Created Web Application</display-name>
-  <servlet>
-  	<servlet-name>ShortUrlServlet</servlet-name>
-  	<display-name>ShortUrlServlet</display-name>
-  	<description></description>
-  	<servlet-class>com.lingxin.shorturl.ShortUrlServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-  	<servlet-name>ShortUrlServlet</servlet-name>
-  	<url-pattern>/s</url-pattern>
-  </servlet-mapping>
+	<display-name>Short Url Service</display-name>
+	<servlet>
+		<servlet-name>ShortUrlServlet</servlet-name>
+		<display-name>ShortUrlServlet</display-name>
+		<description></description>
+		<servlet-class>com.lingxin.shorturl.web.ShortUrlServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ShortUrlCtrl</servlet-name>
+		<display-name>ShortUrlCtrl</display-name>
+		<description></description>
+		<servlet-class>com.lingxin.shorturl.manager.ShortUrlCtrl</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ShortUrlServlet</servlet-name>
+		<url-pattern>/s</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ShortUrlCtrl</servlet-name>
+		<url-pattern>/shorturl.do</url-pattern>
+	</servlet-mapping>
 </web-app>
