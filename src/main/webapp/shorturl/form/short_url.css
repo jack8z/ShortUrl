@@ -1,0 +1,19 @@
+.box{
+	margin:15px;
+}
+.box .row{
+	margin:5px;
+}
+.box .label{
+	width:120px;
+	display:inline-block;
+	text-align:right;
+	margin-right:5px;
+}
+.box .input-text{
+	width:200px;
+	display:inline-block;
+}
+.box .toolbar{
+	margin-left:150px;
+}

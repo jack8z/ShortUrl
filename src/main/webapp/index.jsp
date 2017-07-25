@@ -7,7 +7,7 @@
 <title>短网址服务</title>
 </head>
 <body>
-<a href="">生成短网址</a>
+<a href="shorturl.do?m=createPage">生成短网址</a>
 <a href="">短网址列表</a>
 </body>
 </html>

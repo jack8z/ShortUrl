@@ -74,7 +74,7 @@ public class ShortUrlModel {
 	}
 
 	/**
-	 * 插入一条短网址
+	 * 插入一条短网址，返回此短网址的ID
 	 * 
 	 * @param shortUrl
 	 * @return

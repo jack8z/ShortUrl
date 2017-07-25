@@ -90,7 +90,7 @@
 					<stopKey>foo</stopKey>
 					<stopPort>9988</stopPort>
 					<webAppConfig>
-						<contextPath>/sodemo</contextPath>
+						<contextPath>/shorturl</contextPath>
 						<tempDirectory>${project.build.directory}/work</tempDirectory>
 						<sessionHandler implementation="org.eclipse.jetty.server.session.SessionHandler">
 							<sessionManager

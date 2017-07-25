@@ -10,6 +10,6 @@ $( document ).ready(function(){
 			return;
 		}
 		
-		$("#form1").action = "shorturl.do?m=create";
+		$("#form1").action = "shorturl.do?m=doCreate";
 	});
 });
