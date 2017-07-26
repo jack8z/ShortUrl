@@ -17,3 +17,11 @@
 .box .toolbar{
 	margin-left:150px;
 }
+.box .success{
+	font-size:30px;
+	color:#009900;
+}
+.box .error_msg{
+	color:#FF0000;
+	margin:5px 15px;
+}

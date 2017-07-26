@@ -1,5 +1,5 @@
 CREATE TABLE `short_urls` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `url` varchar(1024) NOT NULL COMMENT '长网址',
   `title` varchar(100) DEFAULT NULL COMMENT '网址标题',
   `memo` varchar(255) DEFAULT NULL COMMENT '备注',

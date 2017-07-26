@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true">
+	<property name="log.base" value="/var/tmp" />
+	<appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} %method %line:%msg%n</pattern>
+		</encoder>
+	</appender>
+	<appender name="file" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${log.base}/short_url_logback.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+			<fileNamePattern>${log.base}/short_url_%d{yyyy-MM-dd}.%i.log.gz
+			</fileNamePattern>
+			<!-- each file should be at most 100MB, keep 60 days worth of history, 
+				but at most 20GB -->
+			<maxFileSize>100MB</maxFileSize>
+			<!-- old file delete by Cron ，So the following line is not needed! -->
+			<!-- <maxHistory>60</maxHistory> -->
+			<!-- <totalSizeCap>20GB</totalSizeCap> -->
+		</rollingPolicy>
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} %method %line:%msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<logger name="java.sql">
+		<level value="info" />
+	</logger>
+	<logger name="com.lingxin">
+		<level value="info" />
+	</logger>
+	<logger name="com.lingxin.shorturl">
+		<level value="debug" />
+	</logger>
+	<root>
+		<level value="info" />
+		<appender-ref ref="console" />
+	</root>
+</configuration>

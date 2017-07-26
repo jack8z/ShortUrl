@@ -1,11 +1,14 @@
 package com.lingxin.shorturl.manager;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class ShortUrlBean implements java.io.Serializable {
 	private static final long serialVersionUID = 5170127621322435667L;
 
-	private Integer id;// ID
+	private static SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+
+	private Long id;// ID
 	private String url;// 长网址
 	private String title;// 网址标题
 	private String memo;// 备注
@@ -16,11 +19,11 @@ public class ShortUrlBean implements java.io.Serializable {
 	private Date modified;// 短网址的修改时间，当access_times加1时，不修改此时间
 	private Date accessed;// 短网址的最后访问时间，当access_times加1时，修改此时间
 
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
@@ -86,6 +89,13 @@ public class ShortUrlBean implements java.io.Serializable {
 
 	public void setModified(Date modified) {
 		this.modified = modified;
+	}
+
+	public String getAccessedStr() {
+		if (null == accessed) {
+			return "";
+		}
+		return sdf.format(accessed);
 	}
 
 	public Date getAccessed() {
